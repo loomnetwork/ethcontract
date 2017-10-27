@@ -5,7 +5,7 @@ A set utilities for golang that help you manage smart contracts on Ethereuem wit
 See examples folder for more samples. View the docs at readthedocs.
 
 
-## Example Simple tokem contract
+## Example Simple token contract
 see examples/simple_token/main.go
 
 ```
