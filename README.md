@@ -2,7 +2,7 @@
 
 A set utilities for golang that help you manage smart contracts on Ethereuem with GO. These use the standard go-ethereum library, but give niceties for developers building native apps interacting with the blockchain. Including helper methods to deal with Truffle compiled contracts. 
 
-See examples folder for more samples. View the docs at (http://ethcontract.readthedocs.io/en/latest/)[readthedocs].
+See examples folder for more samples. View the docs at [readthedocs](http://ethcontract.readthedocs.io/en/latest/).
 
 
 ## Example Simple token contract
