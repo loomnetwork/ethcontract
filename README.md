@@ -32,14 +32,12 @@ func main() {
 	}
 	fmt.Printf("Deployed contract to address 0x%x", address)
 }
-
-
-
-## Example Deploy truffle contract
-see examples/simple_token/main.go
-
 ```
 
+## Example Deploy truffle contract
+	see examples/simple_token/main.go
+
+```
 const truffleFile = "blockssh.json"
 
 // You need to replace keydata with your own wallet address
@@ -59,5 +57,4 @@ func main() {
 	}
 	fmt.Printf("Deployed truffle contract -%s to address 0x%x", truffleFile, address)
 }
-
 ```
