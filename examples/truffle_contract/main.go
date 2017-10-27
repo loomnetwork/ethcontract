@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/loomnetwork/ethutils"
+	"github.com/loomnetwork/ethcontract"
 )
 
 const truffleFile = "blockssh.json"
@@ -13,7 +13,7 @@ const truffleFile = "blockssh.json"
 const keydata = `0b6abf9f0c659d64798f0231871c4b6928c02f60ad35e83404dc0df5f355541b`
 
 func main() {
-	eclient, err := ethutils.NewEthUtil("http://localhost:8545")
+	eclient, err := ethcontract.NewEthUtil("http://localhost:8545")
 	if err != nil {
 		log.Fatalf("Failed to connect to the Ethereum client: %v", err)
 	}

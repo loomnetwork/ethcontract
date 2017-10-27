@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/loomnetwork/ethutils"
+	"github.com/loomnetwork/ethcontract"
 )
 
 // TokenABI is the input ABI used to generate the binding from.
@@ -17,7 +17,7 @@ const TokenBin = `6060604052604051610ca2380380610ca28339810160405280805190602001
 const keydata = `99eb20da18bb155a2fd8c7d121dee4bd2bdc417255f602f74997da5ec7e7690e`
 
 func main() {
-	eclient, err := ethutils.NewEthUtil("http://localhost:8545")
+	eclient, err := ethcontract.NewEthUtil("http://localhost:8545")
 	if err != nil {
 		log.Fatalf("Failed to connect to the Ethereum client: %v", err)
 	}
