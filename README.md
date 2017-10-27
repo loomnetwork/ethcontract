@@ -39,6 +39,7 @@ func main() {
 see examples/simple_token/main.go
 
 ```
+
 const truffleFile = "blockssh.json"
 
 // You need to replace keydata with your own wallet address
