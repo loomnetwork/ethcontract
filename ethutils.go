@@ -9,6 +9,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
@@ -19,10 +20,11 @@ type ETransact struct {
 	Address  *common.Address
 	Contract *bind.BoundContract
 	TxHash   *common.Hash
+	Tx       *types.Transaction
 }
 
 type EClient struct {
-	conn            *ethclient.Client
+	conn            bind.ContractBackend //*ethclient.Client
 	auth            *bind.TransactOpts
 	LastTranasction *ETransact
 }
@@ -84,6 +86,7 @@ func (e *EClient) deployContractSimple(parsed abi.ABI, contractBin string) (*com
 	e.LastTranasction.Contract = contract
 	h := tx.Hash()
 	e.LastTranasction.TxHash = &h
+	e.LastTranasction.Tx = tx
 
 	return &address, nil
 }
