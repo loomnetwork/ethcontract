@@ -35,7 +35,7 @@ func main() {
 ```
 
 ## Example Deploy truffle contract
-	see examples/simple_token/main.go
+see examples/simple_token/main.go
 
 ```
 const truffleFile = "blockssh.json"
